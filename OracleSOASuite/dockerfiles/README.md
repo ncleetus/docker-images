@@ -43,11 +43,12 @@ Run the following commands as root:
 
 You need to have a running database container or a database running on any machine. The database connection details are required for creating SOA specific RCU schemas while configuring SOA domain. While using a 12.2.0.1 CDB/PDB DB, ensure PDB is used to load the schemas. RCU loading on CDB is not supported.
 
-Please refer [README.md](https://github.com/oracle/docker-images/blob/master/OracleDatabase/README.md) under docker/OracleDatabase for details on how to build Oracle Database image.
+Please refer [README.md](https://github.com/oracle/docker-images/blob/master/OracleDatabase/README.md) under docker/OracleDatabase for details on how to build Oracle Database image. 
 
-The DB image created through above step need to be retagged from `container-registry.oracle.com/oracle/database:12.2.0.1-ee`  to `oracle/database:12.2.0.1-ee` before continuing with next steps.
+The DB image created through above step need to be retagged from `container-registry.oracle.com/database/enterprise:12.2.0.1`  to `oracle/database:12.2.0.1-ee` before continuing with next steps.
 
-$ docker tag container-registry.oracle.com/oracle/database:12.2.0.1-e  oracle/database:12.2.0.1-ee
+$ docker tag container-registry.oracle.com/database/enterprise:12.2.0.1 oracle/database:12.2.0.1-ee
+
 
 ## Running Oracle Database in a Docker container
 
